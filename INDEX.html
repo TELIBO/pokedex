@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="gpt.css">
+    <style>
+        button{
+            background-color:red;
+            border:1px black solid;
+            color:white;
+            font-size:medium;
+            font-family:'Courier New', Courier, monospace;
+            font-weight: 800;
+            cursor:pointer;
+            border-radius:12px;
+            margin:1px;
+        }
+    </style>
+</head>
+<body style="display:flex;flex-direction:column;">
+<div style="display: flex;justify-content: center;align-items: center;flex:1;flex-direction:row;">
+    <img src="Pokédex_logo.png" style="width:400px">;
+</div>
+    <!--LEFT SIDE-->
+<div style="display: flex;flex:1;">
+    <div id="content-box">
+        <div id="pokemon-info">
+            <img id="pokemon-img" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+            >;
+            <div id="pokemon-types">
+               <span class="type-box grass">GRASS</span><span class="type-box poison">POISON</span> 
+            </div>
+            <div id="pokemon-description"></div>
+            <div style="padding-right:60px;">
+                <input id="input" type="text" placeholder="Enter pokemon" required style="padding:4px;border-radius: 10px;">
+                <button type="button" id="submit" style="margin-left: 0px;background-color: red;color:white;padding: 4px;border-radius: 90%;">GO</button>
+            </div>
+            <div style="padding-bottom: 10px;">
+                <div>
+                    <button id="kanto">KANTO</button>
+                    <button id="johto">JOHTO</button>
+                    <button id="hoen">HOEN</button>
+                    <button id="sinoh">SINOH</button>
+                    <br><br>
+                    <button id="unova">UNOVA</button>
+                </div>
+            </div>
+        </div>
+    <!--RIGHT SIDE-->
+        <div id="pokemon-list"></div>
+    <script src="gpt.js"></script>
+ </div>
+</div>
+</body>
+</html>
