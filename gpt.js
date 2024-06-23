@@ -94,28 +94,36 @@ function updatefunction() {
     document.getElementById("pokemon-description").textContent = pokedex[this.id]["pokemondescription"];
 }
 
-document.getElementById("submit").onclick=function(e){
+function updatePokemonInfo(e) {
     e.preventDefault();
-    pokedex.forEach(function(poke){
-        if(document.getElementById("input").value===poke.pokemonname)
-            {
-                document.getElementById("pokemon-img").src=poke.pokemonimage;
-                 //clearpreviousentryintypes
-                let typesdiv=document.getElementById('pokemon-types');
-                while(typesdiv.firstChild){
-                typesdiv.firstChild.remove();
-                }
-                //populate
-                let types=poke.pokemontype;
-                for(let i=0;i<types.length;i++){
-                let type=document.createElement("span");
-                type.textContent=types[i]["type"]["name"].toUpperCase();
-                type.classList.add("type-box");
-                type.classList.add(types[i]["type"]["name"]);//add background color and font color
-                typesdiv.append(type);
-                }
-                //description
-                document.getElementById("pokemon-description").textContent=poke.pokemondescription;
+    const inputValue = document.getElementById("input").value.toLowerCase();
+
+    pokedex.forEach(function(poke) {
+        if (inputValue === poke.pokemonname.toLowerCase()) {
+            // Update the image source
+            document.getElementById("pokemon-img").src = poke.pokemonimage;
+
+            // Clear previous entries in types
+            let typesDiv = document.getElementById('pokemon-types');
+            while (typesDiv.firstChild) {
+                typesDiv.firstChild.remove();
             }
-            })
+
+            // Populate types
+            let types = poke.pokemontype;
+            types.forEach(function(typeInfo) {
+                let type = document.createElement("span");
+                type.textContent = typeInfo.type.name.toUpperCase();
+                type.classList.add("type-box", typeInfo.type.name); // Add background color and font color
+                typesDiv.append(type);
+            });
+
+            // Update the description
+            document.getElementById("pokemon-description").textContent = poke.pokemondescription;
+        }
+    });
 }
+
+document.getElementById("submit").addEventListener("click", updatePokemonInfo);
+document.getElementById("submit").addEventListener("touchend", updatePokemonInfo);
+
