@@ -94,6 +94,39 @@ function updatefunction() {
     document.getElementById("pokemon-description").textContent = pokedex[this.id]["pokemondescription"];
 }
 
+// function updatePokemonInfo(e) {
+//     e.preventDefault();
+//     const inputValue = document.getElementById("input").value.toLowerCase();
+
+//     pokedex.forEach(function(poke) {
+//         if (inputValue === poke.pokemonname.toLowerCase()) {
+//             // Update the image source
+//             document.getElementById("pokemon-img").src = poke.pokemonimage;
+
+//             // Clear previous entries in types
+//             let typesDiv = document.getElementById('pokemon-types');
+//             while (typesDiv.firstChild) {
+//                 typesDiv.firstChild.remove();
+//             }
+
+//             // Populate types
+//             let types = poke.pokemontype;
+//             types.forEach(function(typeInfo) {
+//                 let type = document.createElement("span");
+//                 type.textContent = typeInfo.type.name.toUpperCase();
+//                 type.classList.add("type-box", typeInfo.type.name); // Add background color and font color
+//                 typesDiv.append(type);
+//             });
+
+//             // Update the description
+//             document.getElementById("pokemon-description").textContent = poke.pokemondescription;
+//         }
+//     });
+// }
+
+// document.getElementById("submit").addEventListener("click", updatePokemonInfo);
+// document.getElementById("submit").addEventListener("touchend", updatePokemonInfo);
+
 function updatePokemonInfo(e) {
     e.preventDefault();
     const inputValue = document.getElementById("input").value.toLowerCase();
@@ -124,6 +157,20 @@ function updatePokemonInfo(e) {
     });
 }
 
-document.getElementById("submit").addEventListener("click", updatePokemonInfo);
-document.getElementById("submit").addEventListener("touchend", updatePokemonInfo);
+function addEventListeners() {
+    const submitButton = document.getElementById("submit");
 
+    // Remove any existing listeners to prevent duplication
+    submitButton.removeEventListener("click", updatePokemonInfo);
+    submitButton.removeEventListener("touchend", updatePokemonInfo);
+
+    // Add both click and touchend event listeners
+    submitButton.addEventListener("click", updatePokemonInfo);
+    submitButton.addEventListener("touchend", function(e) {
+        e.preventDefault(); // Prevent touch event from also triggering click event
+        updatePokemonInfo(e);
+    });
+}
+
+// Initialize event listeners
+addEventListeners();
