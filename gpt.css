@@ -14,7 +14,7 @@ body {
     border-radius: 10px;
     background-color: green;
     display: flex;
-    flex-direction: column;
+    flex-direction:row;
     margin: 0 auto;
     margin-top: 60px;
     background-image: url("pokeball.jpg");
@@ -41,7 +41,7 @@ body {
 
 #pokemon-list {
     width: 100%;
-    height: 300px;
+    height: 620px;
     overflow-y: scroll;
     font-family: 'Courier New', Courier, monospace;
     font-size: large;
@@ -185,11 +185,13 @@ body {
     box-sizing: border-box;
     display: inline-block;
 }
+#searchdiv{
 
+}
 /* Media Queries for Responsive Design */
 @media (min-width: 600px) {
     #content-box {
-        flex-direction: row;
+        flex-direction:row;
         height: 580px;
     }
     #pokemon-info, #pokemon-list {
@@ -198,5 +200,20 @@ body {
     }
     #pokemon-list {
         overflow-y: scroll;
+        height:570px;
+    }
+    #searchdiv{
+        padding-right:60px;
+    }
+    #input{
+        padding:4px;
+        border-radius: 10px;
+    }
+    #submit{
+        margin-left: 0px;
+        background-color: red;
+        color:white;
+        padding: 4px;
+        border-radius: 90%;
     }
 }

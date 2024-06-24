@@ -4,6 +4,7 @@ var pokedex = [];
 
 window.onload = async function () {
     await loadAllPokemon();
+    document.getElementById("pokemon-description").textContent = pokedex[1] ? pokedex[1]['pokemondescription'] : "";
     document.getElementById("kanto").onclick = async function(){
         pokemonstart = 1;
         pokemonend = 152;
@@ -39,7 +40,6 @@ window.onload = async function () {
         document.getElementById("pokemon-img").src = pokedex[494]['pokemonimage'];
         document.getElementById("pokemon-description").textContent = pokedex[494]['pokemondescription'];
     }
-    document.getElementById("pokemon-description").textContent = pokedex[1] ? pokedex[1]['pokemondescription'] : "";
 }
 
 const loadAllPokemon = async function () {
