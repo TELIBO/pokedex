@@ -185,9 +185,7 @@ body {
     box-sizing: border-box;
     display: inline-block;
 }
-#searchdiv{
 
-}
 /* Media Queries for Responsive Design */
 @media (min-width: 600px) {
     #content-box {
@@ -217,3 +215,4 @@ body {
         border-radius: 90%;
     }
 }
+
