@@ -30,7 +30,7 @@ A web-based Pokédex application that allows users to view and search for Pokém
 
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the BSD-2-Clause license See `LICENSE` for more information.
 
 ## Contact
 
