@@ -1,3 +1,5 @@
+PLEASE START THE REPO IF YOU FIND IT USEFULL 
+
 🚀 Project Showcase: Interactive Pokédex Web Application 🚀
 
 I'm excited to share my latest web development project—a fully interactive and immersive Pokédex web application! This project is a labor of love for all Pokémon enthusiasts and a great example of blending creativity with technical skills.
