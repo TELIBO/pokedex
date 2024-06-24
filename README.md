@@ -34,9 +34,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Your Name - [your-email@example.com](mailto:sanjay24281803@example.com)
+Your Name - [sanjay24281803@example.com](mailto:sanjay24281803@example.com)
 
-Project Link: [https://github.com/yourusername/pokedex](https://telibo.github.io/pokedex/)
+Project Link: [https://telibo.github.io/pokedex/](https://telibo.github.io/pokedex/)
 
 ---)
 
