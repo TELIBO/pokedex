@@ -1,0 +1,68 @@
+/* Pokemon Display Component Styles */
+.pokemon-display {
+  width: 100%;
+}
+
+.pokemon-image {
+  border: 1px black solid;
+  border-radius: 10px;
+  width: 80%;
+  height: 200px;
+  margin-top: 10px;
+  background-color: aliceblue;
+}
+
+.pokemon-types {
+  margin: 10px;
+}
+
+.type-box {
+  padding: 4px 8px;
+  margin: 4px;
+  border: 1px black solid;
+  border-radius: 4px;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Type Colors */
+.type-box.normal { background-color: beige; color: black; }
+.type-box.fire { background-color: orange; color: white; }
+.type-box.grass { background-color: green; color: white; }
+.type-box.water { background-color: blue; color: white; }
+.type-box.ice { background-color: lightblue; color: black; }
+.type-box.electric { background-color: gold; color: black; }
+.type-box.fighting { background-color: darkred; color: white; }
+.type-box.flying { background-color: skyblue; color: black; }
+.type-box.bug { background-color: yellowgreen; color: white; }
+.type-box.ghost { background-color: purple; color: white; }
+.type-box.rock { background-color: sienna; color: white; }
+.type-box.ground { background-color: burlywood; color: black; }
+.type-box.steel { background-color: silver; color: black; }
+.type-box.dark { background-color: darkgray; color: white; }
+.type-box.psychic { background-color: palevioletred; color: white; }
+.type-box.fairy { background-color: pink; color: black; }
+.type-box.dragon { background-color: teal; color: white; }
+.type-box.poison { background-color: darkviolet; color: white; }
+
+.pokemon-description {
+  height: 100px;
+  background-color: aliceblue;
+  width: 90%;
+  padding: 10px;
+  margin: 10px auto;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: medium;
+  font-weight: 700;
+  overflow-y: auto;
+  border-radius: 12px;
+  border: 1px black solid;
+}
+
+.loading, .no-pokemon {
+  padding: 20px;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+}

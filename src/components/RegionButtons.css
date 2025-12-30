@@ -1,0 +1,31 @@
+/* Region Buttons Component Styles */
+.region-buttons {
+  padding: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+}
+
+.region-button {
+  background-color: rgb(220, 187, 20);
+  border: 1px black solid;
+  color: white;
+  font-size: medium;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 800;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 8px 16px;
+  margin: 2px;
+  transition: all 0.2s;
+}
+
+.region-button:hover {
+  background-color: darkred;
+  transform: scale(1.05);
+}
+
+.region-button:active {
+  transform: scale(0.98);
+}
